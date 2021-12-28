@@ -1,5 +1,6 @@
-import './styles/App.scss';
+import './styles/style.scss';
 import { useEffect } from 'react';
+import Signup from './pages/signup/Signup';
 
 function App() {
   
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <div className="App">
-    jj
+    
+      <Signup/>
     </div>
   );
 }
