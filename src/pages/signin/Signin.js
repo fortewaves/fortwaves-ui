@@ -6,7 +6,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsFacebook } from 'react-icons/bs';
 import { BsApple } from 'react-icons/bs';
 import { Button } from '../../components/buttons/Btns';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 // TODO : need to restyle terms agreement paragraph...
@@ -15,6 +15,9 @@ import { NavLink } from 'react-router-dom';
 const { Title } = Typography;
 
 const Signin = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className='auth'>
             <div style={{borderBottom: '1px solid #c5c5c5'}}>
@@ -41,7 +44,7 @@ const Signin = () => {
                             - I have read and agreed to the terms of service
                         </Checkbox>
                     </div> */}
-                    <div className='cta'>
+                    <div onClick={()=> navigate('dashboard')} className='cta'>
                         <Button title={'Login'}/>
                     </div>
                     <div style={{display:'flex', alignItems:'center', fontWeight:'100', fontSize:'.8rem', justifyContent:'flex-end'}}>
