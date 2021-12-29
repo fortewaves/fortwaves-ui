@@ -12,41 +12,41 @@ const SideBar = () => {
     return (
         <div className='sidebar'>
             <header>
-                <Title style={{padding:'.5rem'}} level={5}>Fortewaves</Title>
+                <Title style={{padding:'1rem'}} level={5}>Fortewaves</Title>
             </header>
 
             <nav>
                 <ul>
                     <li>
-                        <BsWallet />
+                        <BsWallet  className='icon'/>
                         <Title className='title' level={5}>Wallet</Title>
                     </li>
                     <li>
-                        <BsPiggyBank/>
+                        <BsPiggyBank className='icon'/>
                         <Title className='title' level={5}>Savings</Title>
                     </li>
                     <li>
-                        <BsGraphUp/>
+                        <BsGraphUp className='icon'/>
                         <Title className='title' level={5}>Investment</Title>
                     </li>
                     <li>
-                        <BiTransfer/>
+                        <BiTransfer className='icon'/>
                         <Title className='title' level={5}>Transfers</Title>
                     </li>
                     <li>
-                        <BsCashStack/>
+                        <BsCashStack className='icon'/>
                         <Title className='title' level={5}>Withdraw</Title>
                     </li>
                     <li>
-                        <MdPeopleOutline/>
+                        <MdPeopleOutline className='icon'/>
                         <Title className='title' level={5}>Refer</Title>
                     </li>
                     <li>
-                        <MdMobileFriendly/>
+                        <MdMobileFriendly className='icon'/>
                         <Title className='title' level={5}>Mobilr top-up</Title>
                     </li>
                     <li>
-                        <BiSupport/>
+                        <BiSupport className='icon'/>
                         <Title className='title' level={5}>Customer support</Title>
                     </li>
                 </ul>
