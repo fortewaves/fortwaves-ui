@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
 
 const { Title } = Typography;
 
-const Signup = () => {
+const Signin = () => {
     return (
         <div className='auth'>
             <div style={{borderBottom: '1px solid #c5c5c5'}}>
@@ -24,12 +24,9 @@ const Signup = () => {
             </div>
             <div className='container'>
                 <div className='form'>
-                    <Title style={{fontWeight:'200', marginBottom:'2rem'}} level={3}>Signup</Title>
+                    <Title style={{fontWeight:'200', marginBottom:'2rem'}} level={3}>Login</Title>
 
-                    <div className='input-container'>
-                        <AiOutlineEdit/>
-                        <Input placeholder='Name' />
-                    </div>
+                 
                     <div className='input-container'>
                         <AiOutlineMail/>
                         <Input placeholder='Email' />
@@ -39,17 +36,17 @@ const Signup = () => {
                         <Input type={'password'} placeholder='Password' />
                     </div>
 
-                    <div className='terms'>
+                    {/* <div className='terms'>
                         <Checkbox style={{fontWeight:'200', fontSize:'.8rem'}}>
                             - I have read and agreed to the terms of service
                         </Checkbox>
-                    </div>
+                    </div> */}
                     <div className='cta'>
-                        <Button title={'Signup'}/>
+                        <Button title={'Login'}/>
                     </div>
                     <div style={{display:'flex', alignItems:'center', fontWeight:'100', fontSize:'.8rem', justifyContent:'flex-end'}}>
-                        <p>Already have an account? </p>
-                        <NavLink to={'/signin'}>. Login</NavLink>
+                        <p>Don't have an account? </p>
+                        <NavLink to={'/signup'}>. create one</NavLink>
                     </div>
                 </div>
 
@@ -65,4 +62,4 @@ const Signup = () => {
     );
 };
 
-export default Signup;
+export default Signin;
