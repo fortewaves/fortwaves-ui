@@ -1,6 +1,6 @@
-import { Input, Checkbox, Typography } from 'antd';
+import { Input, Typography } from 'antd';
 import React from 'react';
-import { AiOutlineEdit, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMail } from 'react-icons/ai';
 import { GrSecure } from 'react-icons/gr';
 import { FcGoogle } from 'react-icons/fc';
 import { BsFacebook } from 'react-icons/bs';
