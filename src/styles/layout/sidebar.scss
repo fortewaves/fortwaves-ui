@@ -6,6 +6,12 @@
     border-bottom-right-radius: 2rem;
     z-index: 100;
 
+    &  header {
+        color: $white;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
     &  nav {
         margin: 5rem 0;
         color: $white;

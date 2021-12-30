@@ -8,3 +8,13 @@ export const Button = ({title}) => (
         borderRadius:'.3rem'
     }}>{title}</button>
 )
+
+export const Btn = ({title}) => (
+    <button style={{
+        backgroundColor:'black',
+        color:'white',
+        padding:'.7rem 1rem',
+        border:'none',
+        borderRadius:'.3rem'
+    }}>{title}</button>
+)

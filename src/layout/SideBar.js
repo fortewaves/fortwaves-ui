@@ -16,7 +16,7 @@ const SideBar = () => {
     return (
         <div className='sidebar'>
             <header>
-                <Title style={{padding:'1rem'}} level={5}>Fortewaves</Title>
+                <Title style={{padding:'1rem'}} level={4}>Fortewaves</Title>
             </header>
 
             <nav>

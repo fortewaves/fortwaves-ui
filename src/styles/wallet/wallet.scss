@@ -1,18 +1,42 @@
 .wallet {
 
+    &  header {
+        // border-radius: 3rem;
+        margin-bottom: 2rem;
+    }
+
     &  .balance {
         margin: 2rem 0;
         font-weight: 200;
     }
 
     &  .info {
-        padding: 4rem;
+        padding: 1rem 4rem;
         margin: 1rem 0;
-        border-radius: 2rem;
         box-shadow: 1px 1px 1rem #e7e7e7;
+        border-radius: 2rem;
 
-        &  p {
-            margin: 1rem 0;
+        
+
+        &  .option {
+            margin: 4rem 0;
+            border: 1px solid $gray;
+            background-color: #fcfcfc;
+            border-radius: 1rem;
+            padding: 2rem;
+
+            &  p {
+                margin: .4rem 0;
+                font-style: italic;
+                font-weight: 100;
+                font-size: .7rem;
+            }
+
+            &  .cta {
+                text-align: right;
+            }
         }
+
+       
     }
 }
