@@ -1,9 +1,10 @@
 .header {
     background-color: $white;
-    box-shadow: 1px 0 1rem rgb(231, 231, 231);
-    width: 86vw;
+    box-shadow: 1px 1px 1rem rgb(231, 231, 231);
+    width: 85vw;
     padding: 1rem 4rem;
     display: flex;
     justify-content: space-between;
     margin-left: -1vw;
+    border-radius: 3rem;
 }

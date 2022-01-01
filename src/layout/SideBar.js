@@ -37,10 +37,10 @@ const SideBar = () => {
                         <BiTransfer className='icon'/>
                         <Title className='title' level={5}>Transfers</Title>
                     </li>
-                    <li onClick={()=> navigate('home')}>
+                    {/* <li onClick={()=> navigate('home')}>
                         <BsCashStack className='icon'/>
                         <Title className='title' level={5}>Withdraw</Title>
-                    </li>
+                    </li> */}
                     <li onClick={()=> navigate('home')}>
                         <MdPeopleOutline className='icon'/>
                         <Title className='title' level={5}>Refer</Title>
