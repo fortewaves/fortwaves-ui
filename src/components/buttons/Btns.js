@@ -9,12 +9,17 @@ export const Button = ({title}) => (
     }}>{title}</button>
 )
 
-export const Btn = ({title}) => (
+export const Btn = ({icon, title}) => (
     <button style={{
         backgroundColor:'black',
         color:'white',
-        padding:'.7rem 1rem',
+        padding:'.7rem 1.5rem',
         border:'none',
-        borderRadius:'.3rem'
-    }}>{title}</button>
+        borderRadius:'.3rem',
+        display:'flex',
+        alignItems:'center',
+
+    }}>{icon?icon():null} <p style={{marginLeft:'.5rem'}}>{title}</p></button>
 )
+
+
