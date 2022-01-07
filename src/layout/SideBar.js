@@ -1,6 +1,6 @@
 import { Typography } from 'antd';
 import React from 'react';
-import { BsCashStack, BsGraphUp, BsPiggyBank, BsWallet } from 'react-icons/bs';
+import { BsGraphUp, BsPiggyBank, BsWallet } from 'react-icons/bs';
 import { BiSupport, BiTransfer } from 'react-icons/bi';
 import { MdMobileFriendly, MdPeopleOutline } from 'react-icons/md';
 
