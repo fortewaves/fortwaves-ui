@@ -23,7 +23,7 @@ const Wallet = () => {
                 <Title level={5}>Add funds </Title>
                 <p>Add money to your Fortewaves wallet.</p>
                 <p>This could be done by a verity of payment methods including: VISA, Master card, Verve card.</p>
-                <p>The payment will settle in your wallet 1-2 business days after the payment has been confirmedd</p>
+                <p>The payment will settle in your wallet 1-2 business days after the payment has been confirmed</p>
                 <div className='cta'><Btn title={'Add funds'} /></div>
 
             </section>
