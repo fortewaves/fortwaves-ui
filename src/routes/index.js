@@ -7,11 +7,13 @@ import Layout from "../layout";
 import Wallet from "../pages/wallet/Wallet";
 import Savings from "../pages/savings/Savings";
 import Transfer from "../pages/transfer/Transfer";
-
+import Investment from "../pages/investment/Investment";
 import Signin from "../pages/signin/Signin";
 import Signup from "../pages/signup/Signup";
 import New from "../pages/savings/New";
+import InvestList from "../components/investment/InvestList";
 import SavingList from "../components/savings/SavingList";
+import NewInvest from "../pages/investment/NewInvest";
 
 const Router = () => {
   return (
@@ -43,7 +45,7 @@ const Router = () => {
           element={
             <Layout>
               {" "}
-              <New />{" "}
+              <SavingList />{" "}
             </Layout>
           }
         />
@@ -53,6 +55,24 @@ const Router = () => {
             <Layout>
               {" "}
               <Transfer />{" "}
+            </Layout>
+          }
+        />
+        <Route
+          path="/dashboard/investment"
+          element={
+            <Layout>
+              {" "}
+              <InvestList />{" "}
+            </Layout>
+          }
+        />
+        <Route
+          path="/dashboard/investment/new"
+          element={
+            <Layout>
+              {" "}
+              <NewInvest />{" "}
             </Layout>
           }
         />

@@ -1,0 +1,15 @@
+.return {
+  margin: 3% 0%;
+  #all-details {
+    div {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      margin: 1% 0%;
+      color: #00000069;
+
+      span {
+        color: #000000;
+      }
+    }
+  }
+}
