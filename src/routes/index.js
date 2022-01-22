@@ -10,6 +10,8 @@ import Transfer from '../pages/transfer/Transfer';
 
 import Signin from '../pages/signin/Signin';
 import Signup from '../pages/signup/Signup';
+import New from '../pages/savings/New';
+// import SavingList from '../components/savings/SavingList';
 
 
 const Router = () => {
@@ -21,6 +23,7 @@ const Router = () => {
                 <Route path="/dashboard" element={<Layout/>}/>
                 <Route path="/dashboard/wallet" element={<Layout> <Wallet/> </Layout>}/>
                 <Route path="/dashboard/savings" element={<Layout> <Savings/> </Layout>}/>
+                <Route path="/dashboard/savings/new" element={<Layout> <New/> </Layout>}/>
                 <Route path="/dashboard/transfer" element={<Layout> <Transfer/> </Layout>}/>
 
                 {/* // auth routes */}
