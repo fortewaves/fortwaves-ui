@@ -1,48 +1,16 @@
-import React from 'react'
-import head from '../../images/head-avatar.png'
-const Fixed=() =>{
-    return (
-        <div>
-            <div className='save-card'>
-                    <div className='head-icon'>
-                        <img src={head} alt='head'/>
-                    </div>
-                    <div className="card-text">
-                        <p>your goal</p>
-                        <p>20.3%</p>
-                    </div>
-                </div>
+import React from "react";
+import head from "../../images/head-avatar.png";
+import SavingsCard from "./SavingsCard";
+const Fixed = () => {
+  return (
+    <div>
+      <SavingsCard image={head} title="your goal" percent="20.3%" />
+      <SavingsCard image={head} title="your goal" percent="20.3%" />
+      <SavingsCard image={head} title="your goal" percent="20.3%" />
+      <SavingsCard image={head} title="your goal" percent="20.3%" />
+      <SavingsCard image={head} title="your goal" percent="20.3%" />
+    </div>
+  );
+};
 
-                <div className='save-card'>
-                    <div className='head-icon'>
-                        <img src={head} alt='head'/>
-                    </div>
-                    <div className="card-text">
-                        <p>your goal</p>
-                        <p>20.3%</p>
-                    </div>
-                </div>
-                <div className='save-card'>
-                    <div className='head-icon'>
-                        <img src={head} alt='head'/>
-                    </div>
-                    <div className="card-text">
-                        <p>your goal</p>
-                        <p>20.3%</p>
-                    </div>
-                </div>
-                <div className='save-card'>
-                    <div className='head-icon'>
-                        <img src={head} alt='head'/>
-                    </div>
-                    <div className="card-text">
-                        <p>your goal</p>
-                        <p>20.3%</p>
-                    </div>
-                </div>
-            
-        </div>
-    )
-}
-
-export default Fixed
+export default Fixed;
