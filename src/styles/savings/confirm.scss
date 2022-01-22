@@ -1,0 +1,30 @@
+//css for confirm component in savings page
+.confirm-container {
+  margin-top: 2%;
+  .detail-holder {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    .img-holder {
+      height: 20vh;
+      border: 1px dashed $borderColor;
+      border-radius: 10px;
+      width: 70%;
+    }
+    .details {
+      p {
+        margin-bottom: 2%;
+      }
+      #all-details {
+        div {
+          display: grid;
+          grid-template-columns: 1fr 1.7fr;
+          margin: 1% 0%;
+          span {
+            color: $borderColor;
+          }
+        }
+      }
+    }
+  }
+}
