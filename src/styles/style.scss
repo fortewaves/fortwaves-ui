@@ -12,6 +12,17 @@ button {
     cursor: pointer;
 }
 
+.content{
+    border-radius: 30px;
+    height: 60vh;
+    box-shadow: 2px 2px 1rem #ebebeb;
+    padding:3% 5%;
+    .content-body{
+        height: 46vh;
+        overflow: auto;
+    }
+}
+
 
 @import './variables.scss';
 @import './imports.scss';

@@ -1,0 +1,21 @@
+//css for Success component in savings page
+.success {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  p {
+    color: $borderColor;
+  }
+  .icon {
+    font-size: 10rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3%;
+}

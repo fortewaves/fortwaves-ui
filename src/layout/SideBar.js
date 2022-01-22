@@ -47,7 +47,7 @@ const SideBar = () => {
                     </li>
                     <li onClick={()=> navigate('home')}>
                         <MdMobileFriendly className='icon'/>
-                        <Title className='title' level={5}>Mobilr top-up</Title>
+                        <Title className='title' level={5}>Mobile top-up</Title>
                     </li>
                     <li onClick={()=> navigate('home')}>
                         <BiSupport className='icon'/>
