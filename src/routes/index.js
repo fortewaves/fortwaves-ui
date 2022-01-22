@@ -11,7 +11,7 @@ import Transfer from "../pages/transfer/Transfer";
 import Signin from "../pages/signin/Signin";
 import Signup from "../pages/signup/Signup";
 import New from "../pages/savings/New";
-// import SavingList from "../components/savings/SavingList";
+import SavingList from "../components/savings/SavingList";
 
 const Router = () => {
   return (
