@@ -1,16 +1,16 @@
 .savings {
-    text-align: center;
+  text-align: center;
 
-    &  header {
-        text-align: left;
+  & header {
+    text-align: left;
+  }
+
+  & .icon-cont {
+    margin: 2rem 0rem;
+    opacity: 0.2;
+
+    & .icon {
+      font-size: 20rem;
     }
-
-    &  .icon-cont {
-        margin: 2rem 0;
-        opacity: .2;
-
-        &  .icon {
-            font-size: 20rem;
-        }
-    }
+  }
 }
