@@ -1,0 +1,15 @@
+//css for title component in savings page
+.title {
+  p {
+    margin-top: 5%;
+    color: $borderColor;
+  }
+  input {
+    margin-top: 1%;
+    border: 1px solid $borderColor;
+    width: 90%;
+    padding: 2% 4%;
+    border-radius: 10px;
+    outline: none;
+  }
+}

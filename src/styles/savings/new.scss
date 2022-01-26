@@ -1,0 +1,13 @@
+.new {
+  display: grid;
+  row-gap: 5%;
+  .title {
+    font-weight: bold;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3%;
+  }
+}

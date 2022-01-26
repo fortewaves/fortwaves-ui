@@ -1,17 +1,27 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
+.info {
+  padding: 3rem 4rem;
+  margin: 1rem 0;
+  box-shadow: 1px 1px 1rem #e7e7e7;
+  border-radius: 2rem;
+  .content-body {
+    height: 46vh;
+    overflow: auto;
+  }
+}
 
-@import './variables.scss';
-@import './imports.scss';
+@import "./variables.scss";
+@import "./imports.scss";
