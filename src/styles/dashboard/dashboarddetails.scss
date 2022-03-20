@@ -1,0 +1,26 @@
+.dashboard-details {
+  margin: 5% 0%;
+  padding: 1% 5%;
+
+  background-color: rgba(231, 231, 231, 0.19);
+  border-radius: 10px;
+  div {
+    display: flex;
+    gap: 20%;
+    p {
+      flex-grow: 2;
+      font-size: 14px;
+      color: #a8a8a8;
+    }
+    .btn {
+      flex-grow: 2;
+    }
+  }
+}
+.invest-overview {
+  //   padding: 0% 5% 2% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  gap: 2%;
+  margin-bottom: 5%;
+}

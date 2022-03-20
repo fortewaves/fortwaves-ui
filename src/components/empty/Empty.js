@@ -1,24 +1,31 @@
 import React from "react";
 import { FcFinePrint } from "react-icons/fc";
 import { FaPiggyBank } from "react-icons/fa";
-import { Typography } from "antd";
+
 import { Btn } from "../buttons/Btns";
-const { Title } = Typography;
+import Card from "../container/Card";
+import { NavLink } from "react-router-dom";
 const Empty = ({ text, title }) => {
   return (
     <div className="savings">
-      <header>
-        <Title level={4}>{title}</Title>
-      </header>
+      <div className="top">
+        <h3>{title}</h3>
+      </div>
+      <Card>
+        <div className="icon-cont">
+          {/* // empty list */}
+          <FcFinePrint className="icon" />
+        </div>
+        <p>
+          You currently do not have {text}, please create one to get started
+        </p>
 
-      <div className="icon-cont">
-        {/* // empty list */}
-        <FcFinePrint className="icon" />
-      </div>
-      <p>You currently do not have {text}, please create one to get started</p>
-      <div style={{ width: "max-content", margin: "2rem auto" }}>
-        <Btn icon={() => <FaPiggyBank />} title={`Create ${text}`} />
-      </div>
+        <div style={{ width: "max-content", margin: "2rem auto" }}>
+          <NavLink to="new">
+            <Btn icon={() => <FaPiggyBank />} title={`Create ${text}`} />
+          </NavLink>
+        </div>
+      </Card>
     </div>
   );
 };

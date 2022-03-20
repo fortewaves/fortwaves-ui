@@ -17,9 +17,12 @@ button {
   margin: 1rem 0;
   box-shadow: 1px 1px 1rem #e7e7e7;
   border-radius: 2rem;
+  min-height: 55vh;
+  box-sizing: content-box;
   .content-body {
-    height: 46vh;
+    height: 50vh;
     overflow: auto;
+    box-sizing: content-box;
   }
 }
 

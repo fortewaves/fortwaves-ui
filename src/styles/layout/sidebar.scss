@@ -1,70 +1,72 @@
 .sidebar {
-    background-color: $gray;
-    width: 15vw;
-    height: 100vh;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    z-index: 100;
+  background-color: $gray;
+  min-width: 15rem;
+  height: 100vh;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  z-index: 100;
 
-    &  header {
-        color: $white;
-        text-align: center;
-        padding: 1rem 0;
-    }
+  & header {
+    color: $white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  & .overview {
+    margin: 0rem 1rem;
+  }
 
-    &  nav {
-        margin: 5rem 0;
-        color: $white;
+  & nav {
+    color: $white;
 
-        &  ul {
-            padding: 2rem 0;
+    & ul {
+      padding: 2rem 0;
 
-            &  li {
-                padding: 1rem 2rem;
-                margin: .5rem 0;
-                display: flex;
-                align-items: center;
-                font-size: 1rem;
-                cursor: pointer;
-                position: relative;
+      & li {
+        padding: 1rem 2rem;
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        cursor: pointer;
+        position: relative;
 
-                &  .icon {
-                    z-index: 100;
-                    transition: all 1s;
-                }
-
-                &  .title {
-                    margin-left: 1rem;
-                    font-weight: 500;
-                    z-index: 100;
-                    transition: all .5s;
-                }
-                &::after {
-                    content: "";
-                    width: 0;
-                    height: 100%;
-                    background-color: $white;
-                    border-top-left-radius: 3rem;
-                    border-bottom-left-radius: 3rem;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    transition: all .2s ease-out;
-                }
-
-                &:hover::after {
-                    width: 90%;
-                }
-                &:hover .icon {
-                    transform: translateX(2rem);
-                }
-                &:hover .title {
-                    transform: translateX(2rem);
-                }
-                &:hover {
-                    color: $gray;
-                }
-            }
+        & .icon {
+          z-index: 100;
+          transition: all 1s;
         }
+
+        & .title {
+          margin-left: 1rem;
+          font-weight: 500;
+          z-index: 100;
+          transition: all 0.5s;
+        }
+        &::after {
+          content: "";
+          width: 0;
+          height: 100%;
+          background-color: $white;
+          border-top-left-radius: 3rem;
+          border-bottom-left-radius: 3rem;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transition: all 0.2s ease-out;
+        }
+
+        &:hover::after {
+          width: 90%;
+        }
+        &:hover .icon {
+          transform: translateX(2rem);
+        }
+        &:hover .title {
+          transform: translateX(2rem);
+        }
+        &:hover {
+          color: $gray;
+        }
+      }
     }
+  }
 }

@@ -5,6 +5,15 @@
 @import "./layout/layout.scss";
 @import "./layout/sidebar.scss";
 
+//Overview Styles
+@import "./overview/overview.scss";
+
+//Dashboard Styles
+@import "./dashboard/amountcard.scss";
+@import "./dashboard/dashboardamounts.scss";
+@import "./dashboard/dashboarddetails.scss";
+@import "./dashboard/investoverviewcard.scss";
+
 // wallet styles
 @import "./wallet/wallet.scss";
 
@@ -23,3 +32,22 @@
 @import "./investment/return.scss";
 @import "./investment/investlist.scss";
 @import "./investment/investcard.scss";
+
+//Transfer Styles
+@import "./transfer/transfer.scss";
+@import "./transfer/transfertype.scss";
+@import "./transfer/ftransfer.scss";
+@import "./transfer/fotransfer.scss";
+
+//Referrals Styles
+@import "./referrals/referCard.scss";
+@import "./referrals/invite.scss";
+
+//Mobile Top-up Styles
+@import "./mobile-topup/topup.scss";
+
+//Transactions Styles
+@import "./transactions/transactionCards.scss";
+@import "./transactions/transactions.scss";
+@import "./transactions/transactionModal.scss";
+@import "./transactions/transactionDetails.scss";

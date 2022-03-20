@@ -4,15 +4,21 @@ import { Btn } from "../buttons/Btns";
 import Flexible from "./Flexible";
 import Fixed from "./Fixed";
 import Card from "../container/Card";
+import { useNavigate } from "react-router-dom";
 
 const SavingList = () => {
   const [active, setActive] = useState(0);
+  const navigate = useNavigate();
   return (
     <div className="saving-list">
       <div className="saving-top">
         <h3>Savings</h3>
         <div style={{ width: "max-content" }}>
-          <Btn icon={() => <FaPiggyBank />} title={"Create a savings plan"} />
+          <Btn
+            onclick={() => navigate("new")}
+            icon={() => <FaPiggyBank />}
+            title={"Create a savings plan"}
+          />
         </div>
       </div>
 

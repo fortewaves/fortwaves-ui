@@ -1,0 +1,42 @@
+.refer-card {
+  display: flex;
+  border: 1px solid #ececec;
+
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 0% 1% 2%;
+  margin: 2% 0%;
+
+  .icon {
+    flex-grow: 0.2;
+    img {
+      border: 1px solid #ececec;
+      border-radius: 60px;
+    }
+  }
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    justify-content: space-between;
+    flex-grow: 2;
+    align-items: center;
+    color: #00000069;
+    .completed {
+      background-color: #43b879;
+      border-radius: 5px;
+      max-width: 70%;
+      padding: 5%;
+      color: #ffffff;
+      text-align: center;
+    }
+    .pending {
+      background: #ffc46a;
+      border-radius: 5px;
+      max-width: 70%;
+      padding: 5%;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+}

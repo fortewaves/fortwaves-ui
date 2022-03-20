@@ -1,45 +1,70 @@
-import React,{useState} from 'react'
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-const Mode=()=> {
-const [startDate, setStartDate] = useState(null);
-const [endDate, setEndDate] = useState(null);
-    return (
-        <div className='mode'>
-            <h3>How would you like to save</h3>
-            <div className='deduct'>
-                <p>Your account will be deducted:</p>
-                <div><input type="radio" name="deduct" value="Daily"/>&nbsp;&nbsp;&nbsp;Daily</div>
-                <div><input type="radio" name="deduct" value="Weekly"/>&nbsp;&nbsp;&nbsp;Weekly</div>
-                <div><input type="radio" name="deduct" value="Monthly"/>&nbsp;&nbsp;&nbsp;Monthly</div>
-            </div>
-            <div className='duration'>
-                <p>Savings Duration: </p>
-                <div>
-                    <DatePicker
-                        className='date'
-                        selected={startDate}
-                        onChange={(date) => setStartDate(date)}
-                        placeholderText="Start Date"
-                        isClearable={true}
-                    
-                    />
-                </div>
-                <div >
-                    <DatePicker
-                        className='date '
-                        selected={endDate}
-                        onChange={(date) => setEndDate(date)}
-                        placeholderText="End Date"
-                        isClearable={true}
-                        
-                        
-                    />
-                </div>  
-            </div>
-            
-        </div>
-    )
-}
+import React, { useState } from "react";
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import { useNavigate } from "react-router-dom";
+import { BtnGrey, BtnBlack } from "../../components/buttons/Btns";
+import { Calendar } from "react-modern-calendar-datepicker";
+const Mode = () => {
+  const defaultFrom = {
+    year: 2019,
+    month: 3,
+    day: 4,
+  };
 
-export default Mode
+  const defaultTo = {
+    year: 2019,
+    month: 3,
+    day: 7,
+  };
+
+  const defaultRange = {
+    from: defaultFrom,
+    to: defaultTo,
+  };
+
+  const [selectedDayRange, setSelectedDayRange] = useState(defaultRange);
+
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="content-body">
+        <h3>How would you like to save</h3>
+        <div className="mode">
+          <div className="deduct">
+            <p>Your account will be deducted:</p>
+            <div>
+              <input type="radio" name="deduct" value="Daily" />
+              &nbsp;&nbsp;&nbsp;Daily
+            </div>
+            <div>
+              <input type="radio" name="deduct" value="Weekly" />
+              &nbsp;&nbsp;&nbsp;Weekly
+            </div>
+            <div>
+              <input type="radio" name="deduct" value="Monthly" />
+              &nbsp;&nbsp;&nbsp;Monthly
+            </div>
+          </div>
+          <div className="duration">
+            <p>Savings Duration: </p>
+            <div>
+              <Calendar
+                value={selectedDayRange}
+                onChange={setSelectedDayRange}
+                calendarClassName="custom-calendar"
+                shouldHighlightWeekends
+              />
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="buttons">
+        <BtnGrey onclick={() => navigate(-1)} title={"Back"} />
+        <BtnBlack onclick={() => navigate("../addimage")} title={"Next"} />
+      </div>
+    </>
+  );
+};
+
+export default Mode;

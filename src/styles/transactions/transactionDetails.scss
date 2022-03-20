@@ -1,0 +1,17 @@
+#trans-details {
+  margin-top: 10%;
+  div {
+    margin: 1% 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    .left {
+      color: #000000;
+      justify-self: end;
+    }
+
+    .right {
+      color: #00000069;
+    }
+  }
+}

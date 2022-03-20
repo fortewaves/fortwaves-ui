@@ -1,0 +1,17 @@
+.content-body {
+  margin-top: 5%;
+  div {
+    label {
+      display: block;
+      margin: 1.5% 0%;
+      color: #00000069;
+    }
+    .form-control {
+      padding: 1.5% 2%;
+      width: 50%;
+      border: 1px solid #ececec;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+}

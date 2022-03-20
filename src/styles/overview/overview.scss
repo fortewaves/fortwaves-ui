@@ -1,0 +1,20 @@
+.overview-container {
+  background-color: rgba(196, 196, 196, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  height: 88px;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  #amount {
+    font-size: 12px;
+  }
+  .text {
+    flex-grow: 1;
+  }
+  //   .icon {
+  //     img {
+  //     }
+  //   }
+}

@@ -1,0 +1,24 @@
+.topup {
+  .content-body {
+    label {
+      color: #000000;
+    }
+    input::placeholder {
+      color: #a4a4a4;
+    }
+
+    #amount-container {
+      box-sizing: border-box;
+
+      #ngn {
+        width: 5%;
+        padding-left: 0.8%;
+        padding-right: 0%;
+        margin-right: 0.5%;
+      }
+      #amount {
+        width: 44.5%;
+      }
+    }
+  }
+}

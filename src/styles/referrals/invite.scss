@@ -1,0 +1,14 @@
+.invite-link {
+  margin: 5% 0%;
+  border: 1px solid #dcdcdc;
+  box-sizing: content-box;
+  border-radius: 5px;
+  padding: 0.5%;
+  display: flex;
+  align-items: center;
+  #text {
+    color: #a4a4a4;
+    flex-grow: 2;
+    font-style: italic;
+  }
+}

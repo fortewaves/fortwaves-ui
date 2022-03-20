@@ -1,24 +1,55 @@
 import React from "react";
-
 import { FaPiggyBank } from "react-icons/fa";
 import { Btn } from "../../components/buttons/Btns";
 import Card from "../../components/container/Card";
 import InvestCard from "./InvestCard";
+import { useNavigate } from "react-router-dom";
+
 const InvestList = () => {
+  const navigate = useNavigate();
   return (
     <div className="investment">
-      <div className="investment-top">
+      <div className="top">
         <h3>Investment</h3>
         <div style={{ width: "max-content" }}>
-          <Btn icon={() => <FaPiggyBank />} title={"Create new Investment"} />
+          <Btn
+            onclick={() => navigate("new")}
+            icon={() => <FaPiggyBank />}
+            title={"Create new Investment"}
+          />
         </div>
       </div>
       <Card>
-        <InvestCard serial="1" title="Inv Title" amount="20,000" />
-        <InvestCard serial="2" title="Inv Title" amount="20,000" />
-        <InvestCard serial="3" title="Inv Title" amount="20,000" />
-        <InvestCard serial="4" title="Inv Title" amount="20,000" />
-        <InvestCard serial="5" title="Inv Title" amount="20,000" />
+        <InvestCard
+          date="Sat 25 Jan 2022"
+          status="Unripe"
+          title="Real estate"
+          amount="20,000"
+        />
+        <InvestCard
+          date="Sat 25 Jan 2022"
+          status="Unripe"
+          title="Real estate"
+          amount="20,000"
+        />
+        <InvestCard
+          date="Sat 25 Jan 2022"
+          status="Unripe"
+          title="Real estate"
+          amount="20,000"
+        />
+        <InvestCard
+          date="Sat 25 Jan 2022"
+          status="Unripe"
+          title="Real estate"
+          amount="20,000"
+        />
+        <InvestCard
+          date="Sat 25 Jan 2022"
+          status="Unripe"
+          title="Real estate"
+          amount="20,000"
+        />
       </Card>
     </div>
   );
