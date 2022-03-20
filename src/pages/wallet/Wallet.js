@@ -20,6 +20,7 @@ const Wallet = () => {
 				console.log(err.message);
 			});
 	}, []);
+	
 	return (
 		<div className="">
 			<div className="top">

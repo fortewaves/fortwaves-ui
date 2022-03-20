@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import app from "../../firebase"
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { Input, Typography } from "antd";
 import { AiOutlineMail } from 'react-icons/ai';
 import { GrSecure } from 'react-icons/gr';
@@ -10,8 +15,10 @@ import { BsApple } from 'react-icons/bs';
 import { Button } from '../../components/buttons/Btns';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+  const provider = new GoogleAuthProvider();
+  provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 
-    const auth = getAuth(app);
+  const auth = getAuth(app);
 // TODO : need to restyle terms agreement paragraph...
 
 
@@ -19,22 +26,45 @@ const { Title } = Typography;
 
 const Signin = () => {
 
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    const authenticateUser = () => {
-        
-        signInWithEmailAndPassword(auth, email, password).then(e => {
-            console.log(e)
-            localStorage.setItem('token', e.user.uid)
-            navigate('/dashboard')
-        }).catch(err => {
-            console.log(err.code)
-        })
-    }
+  const authenticateUser = () => {
+      
+      signInWithEmailAndPassword(auth, email, password).then(e => {
+          console.log(e)
+          localStorage.setItem('token', e.user.uid)
+          navigate('/dashboard')
+      }).catch(err => {
+          console.log(err.code)
+      })
+  }
 
+  const authWithPopup = (service) => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        console.log(user)
+        navigate('/dashboard')
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        // // The email of the user's account used.
+        // const email = error.email;
+        // // The AuthCredential type that was used.
+        // const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  }
     return (
       <div className="auth">
         <div style={{ borderBottom: "1px solid #c5c5c5" }}>
@@ -92,7 +122,7 @@ const Signin = () => {
           <Title level={5}>OR</Title>
 
           <div className="social">
-            <button className="soc google">
+            <button className="soc google" onClick={authWithPopup}>
               <FcGoogle size={"1.5em"} style={{ marginRight: "1rem" }} />{" "}
               <p>Signin with Google</p>
             </button>
