@@ -27,12 +27,14 @@ export default class Api {
 	getroom(roomName) {
 		return axios.get(`${this.base_url}/room/${roomName}`);
 	}
+	getInvestments(token) {
+		return axios.get(`${this.base_url}/investments/${token}`);
+	}
 
 	//POST REQUEST
-	register(email, password, name) {
+	register(email, name) {
 		return axios.post(`${this.base_url}/signup`, {
 			email,
-			password,
 			name,
 		});
 	}

@@ -1,0 +1,17 @@
+.auth {
+	.email-content {
+		padding-top: 15vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	p {
+		margin: 2% 0;
+	}
+	a {
+		border-bottom: 1px solid darkblue;
+		border-radius: 3px;
+		padding: 1%;
+	}
+}

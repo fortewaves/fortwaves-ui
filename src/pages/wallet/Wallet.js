@@ -1,26 +1,15 @@
-import React, { useEffect /*useState*/ } from "react";
+import React from "react";
 import { Btn } from "../../components/buttons/Btns";
 
 import { Typography } from "antd";
-import Api from "../../apis/APIs";
+import { useLocation } from "react-router-dom";
 
 const { Title } = Typography;
 
 const Wallet = () => {
-	// const [wallet, setWallet] = useState();
+	const { state } = useLocation();
 
-	useEffect(() => {
-		const API = new Api();
-		const token = localStorage.getItem("token");
-		API.getWallet(token)
-			.then((res) => {
-				console.log(res);
-			})
-			.catch((err) => {
-				console.log(err.message);
-			});
-	}, []);
-	
+	console.log(state);
 	return (
 		<div className="">
 			<div className="top">
@@ -31,7 +20,7 @@ const Wallet = () => {
 			<section className="info">
 				<section className="balance">
 					<Title level={5}>Available Balance</Title>
-					<Title level={2}>NGN0.00</Title>
+					<Title level={2}>&#8358; {state.wallet}</Title>
 				</section>
 				<section className="option">
 					{/* // deposit funds to wallet */}

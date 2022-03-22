@@ -9,28 +9,52 @@ import { Button } from "../../components/buttons/Btns";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Api from "../../apis/APIs";
+import {
+	getAuth,
+	createUserWithEmailAndPassword,
+	sendEmailVerification,
+} from "firebase/auth";
+import app from "../../firebase";
 
 const { Title } = Typography;
 const API = new Api();
+const auth = getAuth(app);
 const Signup = () => {
 	const navigate = useNavigate();
 
 	const handleSignup = (e) => {
 		e.preventDefault();
-		API.register(
+
+		createUserWithEmailAndPassword(
+			auth,
 			e.target.email.value,
-			e.target.password.value,
-			e.target.name.value
+			e.target.password.value
 		)
-			.then((res) => {
-				if (res.data.uid) {
-					navigate("/dashboard");
-					console.log('lll');
-				} else {
-					toast.error(res.data.message);
-				}
-				//
-				console.log(res);
+			.then((userCredential) => {
+				sendEmailVerification(userCredential.user)
+					.then(() => {
+						toast.info(
+							"Email Verification sent!!\nPlease check your email to verify your account"
+						);
+					})
+					.then(() => {
+						API.register(e.target.email.value, e.target.name.value)
+							.then((res) => {
+								if (res.data !== null) {
+									navigate("verify", {
+										state: {
+											name: e.target.name.value,
+											email: e.target.email.value,
+										},
+									});
+								} else {
+									toast.error(res.data.message);
+								}
+							})
+							.catch((err) => {
+								toast.error(err.message);
+							});
+					});
 			})
 			.catch((err) => {
 				toast.error(err.message);

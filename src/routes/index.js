@@ -31,6 +31,7 @@ import TopupSuccess from "../components/mobile-topup/TopupSuccess";
 import Dashboard from "../pages/dashboard/Dashboard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import EmailVerify from "../components/email/EmailVerify";
 // import TopupSuccess from "../components/mobile-topup/TopupSuccess";
 
 const Router = () => {
@@ -79,7 +80,11 @@ const Router = () => {
 
 				{/* // auth routes */}
 				<Route path="/signin" element={<Signin />} />
-				<Route path="/signup" element={<Signup />} />
+
+				<Route path="/signup">
+					<Route index element={<Signup />} />
+					<Route path="verify" element={<EmailVerify />} />
+				</Route>
 			</Routes>
 		</BrowserRouter>
 	);
